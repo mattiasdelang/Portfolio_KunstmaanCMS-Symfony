@@ -4,6 +4,7 @@ namespace kuma\PortfolioBundle\Controller;
 
 
 use Doctrine\ORM\EntityManager;
+use kuma\PortfolioBundle\Entity\Contact;
 use kuma\PortfolioBundle\Form\ContactType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\Form\FormFactory;
@@ -54,15 +55,27 @@ class HomepageController
     public function contactAction(Request $request)
     {
 
-        $contact = $request->request->get('contact');
+        $contact = new Contact();
+
+        $data = $request->request->get('contact');
+
+        $contact->setName($data['name']);
+        $contact->setEmail($data['email']);
+        $contact->setQuestion($data['question']);
 
         try {
+
+
             $message = \Swift_Message::newInstance()
-                ->setSubject('Contactform '.$contact['name'])
+                ->setSubject('Contactform '.$data['name'])
                 ->setFrom('mattias@delang.com')
-                ->setTo($contact['email'])
-                ->setBody($contact['question']);
+                ->setTo($data['email'])
+                ->setBody($data['question']);
             $this->mailer->send($message);
+
+            $this->em->persist($contact);
+            $this->em->flush();
+
 
         }catch (\Swift_RfcComplianceException $e)
         {

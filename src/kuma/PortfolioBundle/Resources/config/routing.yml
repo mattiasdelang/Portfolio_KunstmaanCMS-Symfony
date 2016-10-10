@@ -22,3 +22,10 @@ kumaportfoliobundle_skill_admin_list:
     prefix:   /{_locale}/admin/skill/
     requirements:
          _locale: %requiredlocales%
+
+kumaportfoliobundle_contact_admin_list:
+    resource: '@kumaPortfolioBundle/Controller/ContactAdminListController.php'
+    type:     annotation
+    prefix:   /{_locale}/admin/contact/
+    requirements:
+         _locale: %requiredlocales%
