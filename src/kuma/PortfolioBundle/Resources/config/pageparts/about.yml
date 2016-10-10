@@ -1,0 +1,7 @@
+name: About
+context: about
+extends: main
+types:
+    - { name: Me, class: kuma\PortfolioBundle\Entity\PageParts\MePagePart }
+    - { name: Skill, class: kuma\PortfolioBundle\Entity\PageParts\SkillPagePart }
+    - { name: AboutMe, class: kuma\PortfolioBundle\Entity\PageParts\AboutMePagePart }

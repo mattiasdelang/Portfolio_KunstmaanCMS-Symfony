@@ -1,0 +1,15 @@
+<div class="project-pp" id="portfolio">
+    <h1>Portfolio</h1>
+
+       {% for project in get_projects() %}
+            <a href="{{ project.link }}">
+                <li style="list-style-type: none;border: 1px solid black; margin-bottom:5px;">
+                    image: {{ project.image }}<br>
+                    name: {{ project.name }}<br>
+                    software: {{ project.software }}<br>
+                    role: {{ project.role }}<br>
+                </li>
+            </a>
+        {% endfor %}
+
+</div>

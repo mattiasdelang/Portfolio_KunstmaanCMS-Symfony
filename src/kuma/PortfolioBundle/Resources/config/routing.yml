@@ -1,0 +1,24 @@
+kumaportfoliobundle_default:
+    resource: '@kumaPortfolioBundle/Controller/DefaultController.php'
+    type:     annotation
+    prefix:   /
+
+kumaportfoliobundle_homepage:
+    resource: '@kumaPortfolioBundle/Controller/HomepageController.php'
+    type:     annotation
+    prefix:   /
+
+
+kumaportfoliobundle_project_admin_list:
+    resource: '@kumaPortfolioBundle/Controller/ProjectAdminListController.php'
+    type:     annotation
+    prefix:   /{_locale}/admin/project/
+    requirements:
+         _locale: %requiredlocales%
+
+kumaportfoliobundle_skill_admin_list:
+    resource: '@kumaPortfolioBundle/Controller/SkillAdminListController.php'
+    type:     annotation
+    prefix:   /{_locale}/admin/skill/
+    requirements:
+         _locale: %requiredlocales%

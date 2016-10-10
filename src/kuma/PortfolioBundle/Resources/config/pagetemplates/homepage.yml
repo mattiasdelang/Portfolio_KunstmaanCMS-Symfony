@@ -1,0 +1,9 @@
+name: "Home page"
+rows:
+    - regions:
+        - { name: "home", span: 12 }
+        - { name: "about", span: 12 }
+        - { name: "portfolio", span: 12 }
+        - { name: "contact", span: 12 }
+
+template: "kumaPortfolioBundle::Pages\\HomePage\\pagetemplate.html.twig"

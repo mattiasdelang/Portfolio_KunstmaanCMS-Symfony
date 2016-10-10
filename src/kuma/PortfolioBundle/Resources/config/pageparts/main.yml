@@ -1,0 +1,17 @@
+name: Main
+context: main
+types:
+    - { name: Audio, class: kuma\PortfolioBundle\Entity\PageParts\AudioPagePart }
+    - { name: Button, class: kuma\PortfolioBundle\Entity\PageParts\ButtonPagePart }
+    - { name: Download, class: kuma\PortfolioBundle\Entity\PageParts\DownloadPagePart }
+    - { name: Header, class: kuma\PortfolioBundle\Entity\PageParts\HeaderPagePart }
+    - { name: Image, class: kuma\PortfolioBundle\Entity\PageParts\ImagePagePart }
+    - { name: IntroText, class: kuma\PortfolioBundle\Entity\PageParts\IntroTextPagePart }
+    - { name: Line, class: kuma\PortfolioBundle\Entity\PageParts\LinePagePart }
+    - { name: Link, class: kuma\PortfolioBundle\Entity\PageParts\LinkPagePart }
+    - { name: RawHtml, class: kuma\PortfolioBundle\Entity\PageParts\RawHtmlPagePart }
+    - { name: Text, class: kuma\PortfolioBundle\Entity\PageParts\TextPagePart }
+    - { name: Toc, class: kuma\PortfolioBundle\Entity\PageParts\TocPagePart }
+    - { name: ToTop, class: kuma\PortfolioBundle\Entity\PageParts\ToTopPagePart }
+    - { name: Video, class: kuma\PortfolioBundle\Entity\PageParts\VideoPagePart }
+    - { name: Title, class: kuma\PortfolioBundle\Entity\PageParts\TitlePagePart }

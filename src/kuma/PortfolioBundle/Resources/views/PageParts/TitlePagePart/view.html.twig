@@ -1,0 +1,5 @@
+<div class="title-pp">
+    <p>{{ resource.name }}</p>
+    <p>{{ resource.title }}</p>
+    <a href="{{ resource.buttonUrl|replace_url }}" {% if resource.buttonNewWindow %}target="_blank"{% endif %}>{{ resource.buttonText }}</a>
+</div>

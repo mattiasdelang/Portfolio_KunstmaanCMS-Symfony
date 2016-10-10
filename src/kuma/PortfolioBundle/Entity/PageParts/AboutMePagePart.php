@@ -1,0 +1,69 @@
+<?php
+
+namespace kuma\PortfolioBundle\Entity\PageParts;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * AboutMePagePart
+ *
+ * @ORM\Table(name="kuma_portfoliobundle_about_me_page_parts")
+ * @ORM\Entity
+ */
+class AboutMePagePart extends \kuma\PortfolioBundle\Entity\PageParts\AbstractPagePart
+{
+    /**
+     * @var \kuma\PortfolioBundle\Entity\Skill
+     *
+     * @ORM\ManyToOne(targetEntity="kuma\PortfolioBundle\Entity\Skill")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="name_id", referencedColumnName="id")
+     * })
+     */
+    private $name;
+
+
+    /**
+     * Set name
+     *
+     * @param \kuma\PortfolioBundle\Entity\Skill $name
+     *
+     * @return AboutMePagePart
+     */
+    public function setName(\kuma\PortfolioBundle\Entity\Skill $name = null)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return \kuma\PortfolioBundle\Entity\Skill
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Get the twig view.
+     *
+     * @return string
+     */
+    public function getDefaultView()
+    {
+        return 'kumaPortfolioBundle:PageParts:AboutMePagePart/view.html.twig';
+    }
+
+    /**
+     * Get the admin form type.
+     *
+     * @return \kuma\PortfolioBundle\Form\PageParts\AboutMePagePartAdminType
+     */
+    public function getDefaultAdminType()
+    {
+        return new \kuma\PortfolioBundle\Form\PageParts\AboutMePagePartAdminType();
+    }
+}

@@ -1,0 +1,5 @@
+name: Contact
+context: contact
+extends: main
+types:
+    - { name: Contact, class: kuma\PortfolioBundle\Entity\PageParts\ContactPagePart }

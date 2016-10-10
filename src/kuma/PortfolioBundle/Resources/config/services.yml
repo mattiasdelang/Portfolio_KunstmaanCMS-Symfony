@@ -1,0 +1,12 @@
+services:
+      app.controller.homepage:
+          class:     kuma\PortfolioBundle\Controller\HomepageController
+          arguments: ["@form.factory",'@doctrine.orm.default_entity_manager',"@mailer","@templating"]
+
+      portfolio.projects.twig.extension:
+          class:      kuma\PortfolioBundle\Twig\Extension\ProjectExtension
+          arguments: ["@doctrine.orm.entity_manager"]
+          tags:
+              - { name: twig.extension }
+
+

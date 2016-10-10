@@ -1,0 +1,5 @@
+<div class="me-pp" id="about">
+    <h1>about</h1>
+    {% if resource.image is not empty %}<img src="{{ asset(resource.image.url) }}" {% if resource.imageAltText is not empty %}alt="{{ resource.imageAltText }}"{% endif %} />{% endif %}
+    <p>{{ resource.text }}</p>
+</div>

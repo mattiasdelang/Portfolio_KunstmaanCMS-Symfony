@@ -1,0 +1,5 @@
+name: Portfolio
+context: portfolio
+extends: main
+types:
+    - { name: Project, class: kuma\PortfolioBundle\Entity\PageParts\ProjectPagePart }

@@ -1,0 +1,48 @@
+<div class="contact-pp" id="contact">
+    <h1>contact</h1>
+    {% if pagepartadmin is defined %}
+
+        <p>Hier komt het contact form.</p>
+
+    {% else %}
+        <div id="error" style="color:red;"></div>
+        {{ render(controller(
+        'app.controller.homepage:formAction'
+        )) }}
+
+        <script>
+
+            $(document).ready(function() {
+                $("#send").submit(function(event) {
+                    console.log('hello');
+                    $("#error").html("");
+
+                    event.preventDefault();
+
+                    $.ajax({
+                        type: "post",
+                        url: "/contactform",
+                        data: jQuery("#send").serialize(),
+                        success: function(data) {
+                            if(data.status == true)
+                            {
+                                $("#knop").css("background-color","limegreen");
+                                $("#error").html(data.error);
+                            }
+                            else
+                            {
+                                $("#knop").css("background-color","red");
+                                $("#error").html(data.error);
+                            }
+
+                        }
+                    })
+                });
+            });
+
+        </script>
+
+    {% endif %}
+
+
+</div>
