@@ -1,0 +1,27 @@
+<div class="list-pp">
+
+    {% if  articles is defined%}
+        {% if articles.nbResults > 0 %}
+            {% for article in articles.currentPageResults %}
+                <article class="blog-item blog-item--summary">
+                    <header class="blog-item__head">
+                        <h3 class="blog-item__head__title">
+                            {{ article.name }}
+                        </h3>
+                    </header>
+
+                    {{ article.content }}
+
+                    {% if article.author is not empty %}
+                        | <strong>{{ article.author }}</strong>
+                    {% endif %}
+
+                </article>
+            {% endfor %}
+        {% endif %}
+
+        {{ pagerfanta(articles) }}
+
+    {% endif %}
+
+</div>

@@ -1,0 +1,5 @@
+name: "ContactPage"
+rows:
+    - regions: 
+        - { name: "main", span: 12 }
+template: "kumaPortfolioBundle::Pages\\ContactPage\\pagetemplate.html.twig"

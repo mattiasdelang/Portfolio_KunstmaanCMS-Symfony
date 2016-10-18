@@ -34,6 +34,18 @@ class ContentPage extends AbstractPage implements HasPageTemplateInterface, Sear
     {
         return array (
             array(
+                'name' => 'PagerPage',
+                'class'=> 'kuma\PortfolioBundle\Entity\Pages\PagerPage'
+            ),
+            array(
+                'name' => 'SendPage',
+                'class'=> 'kuma\PortfolioBundle\Entity\Pages\SendPage'
+            ),
+            array(
+                'name' => 'ContactPage',
+                'class'=> 'kuma\PortfolioBundle\Entity\Pages\ContactPage'
+            ),
+            array(
                 'name'  => 'ContentPage',
                 'class' => 'kuma\PortfolioBundle\Entity\Pages\ContentPage'
             ),

@@ -3,6 +3,11 @@ services:
           class:     kuma\PortfolioBundle\Controller\HomepageController
           arguments: ["@form.factory",'@doctrine.orm.default_entity_manager',"@mailer","@templating"]
 
+      app.controller.articlepage:
+          class:     kuma\PortfolioBundle\Controller\ArticleController
+          arguments: ['@doctrine.orm.default_entity_manager']
+
+
       portfolio.projects.twig.extension:
           class:      kuma\PortfolioBundle\Twig\Extension\ProjectExtension
           arguments: ["@doctrine.orm.entity_manager"]

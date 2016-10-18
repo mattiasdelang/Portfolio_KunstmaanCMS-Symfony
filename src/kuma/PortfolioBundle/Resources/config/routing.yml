@@ -29,3 +29,10 @@ kumaportfoliobundle_contact_admin_list:
     prefix:   /{_locale}/admin/contact/
     requirements:
          _locale: %requiredlocales%
+
+kumaportfoliobundle_article_admin_list:
+    resource: '@kumaPortfolioBundle/Controller/ArticleAdminListController.php'
+    type:     annotation
+    prefix:   /{_locale}/admin/article/
+    requirements:
+         _locale: %requiredlocales%

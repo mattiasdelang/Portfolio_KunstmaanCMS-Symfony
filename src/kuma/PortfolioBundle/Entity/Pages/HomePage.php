@@ -36,12 +36,24 @@ class HomePage extends AbstractPage implements HasPageTemplateInterface, SearchT
     {
         return array(
             array(
+                'name' => 'PagerPage',
+                'class'=> 'kuma\PortfolioBundle\Entity\Pages\PagerPage'
+            ),
+            array(
                 'name'  => 'ContentPage',
                 'class' => 'kuma\PortfolioBundle\Entity\Pages\ContentPage'
             ),
             array(
                 'name'  => 'BehatTestPage',
                 'class' => 'kuma\PortfolioBundle\Entity\Pages\BehatTestPage'
+            ),
+            array(
+                'name' => 'Search Page',
+                'class'=> 'kuma\PortfolioBundle\Entity\Pages\SearchPage'
+            ),
+            array(
+                'name' => 'Send Page',
+                'class'=> 'kuma\PortfolioBundle\Entity\Pages\SendPage'
             )
         );
     }

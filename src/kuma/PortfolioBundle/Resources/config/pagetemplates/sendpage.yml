@@ -1,0 +1,5 @@
+name: "SendPage"
+rows:
+    - regions: 
+        - { name: "main", span: 12 }
+template: "kumaPortfolioBundle::Pages\\SendPage\\pagetemplate.html.twig"

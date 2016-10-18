@@ -15,3 +15,4 @@ types:
     - { name: ToTop, class: kuma\PortfolioBundle\Entity\PageParts\ToTopPagePart }
     - { name: Video, class: kuma\PortfolioBundle\Entity\PageParts\VideoPagePart }
     - { name: Title, class: kuma\PortfolioBundle\Entity\PageParts\TitlePagePart }
+    - { name: List, class: kuma\PortfolioBundle\Entity\PageParts\ListPagePart }
