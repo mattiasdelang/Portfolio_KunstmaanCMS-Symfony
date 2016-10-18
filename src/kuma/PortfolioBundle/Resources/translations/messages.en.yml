@@ -1,0 +1,6 @@
+contact:
+    form:
+        name: name
+        email: emailaddress
+        question: your question
+        send: send

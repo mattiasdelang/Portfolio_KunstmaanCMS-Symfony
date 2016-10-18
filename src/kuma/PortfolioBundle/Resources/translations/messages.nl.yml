@@ -1,0 +1,6 @@
+contact:
+    form:
+        name: naam
+        email: emailadres
+        question: uw vraag
+        send: verzend
