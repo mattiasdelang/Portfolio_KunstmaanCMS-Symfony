@@ -20,5 +20,12 @@ services:
             tags:
                 - { name: twig.extension }
 
+      kumaportfoliobundle.admin.menu.adaptor:
+          class:      kuma\PortfolioBundle\Helper\Menu\ModulesMenuAdaptor
+          arguments: ["@doctrine.orm.entity_manager"]
+          tags:
+              - { name: kunstmaan_admin.menu.adaptor }
+
+
 
 
