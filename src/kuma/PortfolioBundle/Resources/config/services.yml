@@ -14,4 +14,11 @@ services:
           tags:
               - { name: twig.extension }
 
+      portfolio.articles.twig.extension:
+            class:      kuma\PortfolioBundle\Twig\Extension\ArticleExtension
+            arguments: ["@doctrine.orm.entity_manager","@request_stack"]
+            tags:
+                - { name: twig.extension }
+
+
 

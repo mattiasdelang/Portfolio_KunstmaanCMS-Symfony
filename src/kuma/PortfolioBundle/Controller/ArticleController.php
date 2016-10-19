@@ -46,7 +46,7 @@ class ArticleController
 
         $pagerfanta->setCurrentPage($pagenumber);
 
-        Return['articles' => $pagerfanta];
+        Return['arti' => $pagerfanta];
 
     }
 

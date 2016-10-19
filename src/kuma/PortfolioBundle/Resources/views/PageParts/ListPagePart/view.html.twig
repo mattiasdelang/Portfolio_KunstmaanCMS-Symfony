@@ -1,8 +1,8 @@
 <div class="list-pp">
-
-    {% if  articles is defined%}
-        {% if articles.nbResults > 0 %}
-            {% for article in articles.currentPageResults %}
+    {% set twigarticles = get_articles() %}
+    {% if  twigarticles.articles is defined %}
+        {% if twigarticles.articles.nbResults > 0 %}
+            {% for article in twigarticles.articles.currentPageResults %}
                 <article class="blog-item blog-item--summary">
                     <header class="blog-item__head">
                         <h3 class="blog-item__head__title">
@@ -19,9 +19,11 @@
                 </article>
             {% endfor %}
         {% endif %}
+        {% set articleOverviewPage = get_node_by_internal_name('article_overview', app.request.locale) %}
 
-        {{ pagerfanta(articles) }}
-
+        {% if twigarticles.articles.haveToPaginate() and articleOverviewPage is not null %}
+            {{ pagerfanta(twigarticles.articles, null, {'routeName': '_slug', 'routeParams': {'url': articleOverviewPage.nodeTranslations[0].url}}) }}
+        {% endif %}
     {% endif %}
 
 </div>

@@ -13,9 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
 class Article extends \Kunstmaan\AdminBundle\Entity\AbstractEntity
 {
     /**
-     * @var string
+     * @var integer
      *
-     * @ORM\Column(name="name", type="string", length=255, nullable=true)
+     * @ORM\Column(name="name", type="integer")
      */
     private $name;
 
@@ -37,7 +37,7 @@ class Article extends \Kunstmaan\AdminBundle\Entity\AbstractEntity
     /**
      * Set name
      *
-     * @param string $name
+     * @param integer $name
      *
      * @return Article
      */
@@ -51,7 +51,7 @@ class Article extends \Kunstmaan\AdminBundle\Entity\AbstractEntity
     /**
      * Get name
      *
-     * @return string
+     * @return integer
      */
     public function getName()
     {
