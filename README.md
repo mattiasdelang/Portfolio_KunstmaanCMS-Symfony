@@ -1,3 +1,8 @@
+## Current portfoliosite in KunstmaanCMS
+This was my first thing I did at my internship, to discover the new CMS.
+This project doesn't have any design or front-end in it, only functionality
+
+
 Kunstmaan Bundles Standard Edition
 ==================================
 
