@@ -1,10 +1,9 @@
-## Current portfoliosite in KunstmaanCMS
+# Current portfoliosite in KunstmaanCMS
 This was my first thing I did at my internship, to discover the new CMS.
 This project doesn't have any design or front-end in it, only functionality
 
 
-Kunstmaan Bundles Standard Edition
-==================================
+## Kunstmaan Bundles Standard Edition
 
 Welcome to the Kunstmaan Bundles Standard Edition - a fully-functional CMS (content management system) based on Symfony2 that you can use as the skeleton for your websites. Please refer to the documentation at [http://bundles.kunstmaan.be/getting-started](http://bundles.kunstmaan.be/getting-started) to get your CMS up and running.
 
